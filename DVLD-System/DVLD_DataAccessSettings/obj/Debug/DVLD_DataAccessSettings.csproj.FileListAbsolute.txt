@@ -1,0 +1,6 @@
+D:\Programming_Advices\Level_One_C#\DVLD\DVLD-System\DVLD_DataAccessSettings\bin\Debug\DVLD_DataAccessSettings.dll
+D:\Programming_Advices\Level_One_C#\DVLD\DVLD-System\DVLD_DataAccessSettings\bin\Debug\DVLD_DataAccessSettings.pdb
+D:\Programming_Advices\Level_One_C#\DVLD\DVLD-System\DVLD_DataAccessSettings\obj\Debug\DVLD_DataAccessSettings.csproj.AssemblyReference.cache
+D:\Programming_Advices\Level_One_C#\DVLD\DVLD-System\DVLD_DataAccessSettings\obj\Debug\DVLD_DataAccessSettings.csproj.CoreCompileInputs.cache
+D:\Programming_Advices\Level_One_C#\DVLD\DVLD-System\DVLD_DataAccessSettings\obj\Debug\DVLD_DataAccessSettings.dll
+D:\Programming_Advices\Level_One_C#\DVLD\DVLD-System\DVLD_DataAccessSettings\obj\Debug\DVLD_DataAccessSettings.pdb
