@@ -38,7 +38,6 @@ namespace DVLD
 
         private void msPeople_Click(object sender, EventArgs e)
         {
-            fm.MdiParent = this;
             fm.Show();
         }
 

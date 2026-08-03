@@ -15,7 +15,7 @@ namespace DVLD_Business
         public enMode Mode = enMode.Add;
 
         public int PersonID { get; set; }
-        public int NationalNo { get; set; }
+        public string NationalNo { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
@@ -32,7 +32,7 @@ namespace DVLD_Business
         {
             Mode = enMode.Add;
             PersonID = -1;
-            NationalNo = -1;
+            NationalNo = "";
             FirstName = "";
             SecondName = "";
             ThirdName = "";
@@ -47,7 +47,7 @@ namespace DVLD_Business
         }
 
 
-        private ClsPerson(int PersonID, int NationalNo, string FirstName, string SecondName,
+        private ClsPerson(int PersonID, string NationalNo, string FirstName, string SecondName,
           string ThirdName, string LastName, DateTime DateOfBirth, byte Gendor, string Address,
           string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
@@ -86,12 +86,13 @@ namespace DVLD_Business
 
         public static ClsPerson FindPersonByID(int PersonID)
         {
-            string FirstName = "", SecondName = "", ThirdName = "", LastName = "", Address = "",Phone = "", Email = "", ImagePath = "";
+            string FirstName = "", SecondName = "", ThirdName = "", LastName = "", Address = "",
+                Phone = "", Email = "", ImagePath = "", NationalNo="";
 
             DateTime DateOfBirth = DateTime.Now;
             byte Gendor = 0;
 
-            int NationalityCountryID = -1, NationalNo=-1;
+            int NationalityCountryID = -1;
 
             if (clsPersonData.GetPersonById(PersonID, ref NationalNo, ref FirstName, ref SecondName, ref ThirdName, ref LastName,
                ref DateOfBirth, ref Gendor, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath)) 
@@ -141,6 +142,10 @@ namespace DVLD_Business
             return clsPersonData.IsPersomExist(ID);
         }
 
+        public static bool IsNationalNoUsedByAnotherPerson(int PersonID, string NationalNo)
+        {
+            return clsPersonData.IsNationalNoUsedByAnotherPerson(PersonID, NationalNo);
+        }
 
     }
 

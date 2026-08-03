@@ -53,7 +53,7 @@
             this.accountSettingsToolStripMenuItem});
             this.msMainFrom.Location = new System.Drawing.Point(0, 0);
             this.msMainFrom.Name = "msMainFrom";
-            this.msMainFrom.Size = new System.Drawing.Size(1232, 49);
+            this.msMainFrom.Size = new System.Drawing.Size(1228, 49);
             this.msMainFrom.TabIndex = 3;
             // 
             // applicationToolStripMenuItem
@@ -136,9 +136,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.BackgroundImage = global::DVLD.Properties.Resources.Screenshot_2026_07_23_122503;
-            this.ClientSize = new System.Drawing.Size(1232, 655);
+            this.ClientSize = new System.Drawing.Size(1228, 591);
             this.Controls.Add(this.msMainFrom);
-            this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DVLD-Driving and Vehicle Licensing Department";

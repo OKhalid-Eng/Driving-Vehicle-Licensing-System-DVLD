@@ -28,5 +28,11 @@ namespace DVLD
         {
             dgvPeople.DataSource = ClsPerson.GetAlPersons();
         }
+
+        private int ID;
+        private void btnAddPerson_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

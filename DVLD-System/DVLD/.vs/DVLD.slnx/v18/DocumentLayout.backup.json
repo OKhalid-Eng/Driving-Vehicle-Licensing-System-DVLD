@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|d:\\programming_advices\\level_one_\u0026_two_c#\\dvld\\dvld-system\\dvld\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -23,8 +19,16 @@
       "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:fmpeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\mycolortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:mycolortable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5382FC16-5040-46F3-A568-F42B3C4E0D9A}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,26 +46,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "fmPeople.cs",
-              "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs",
-              "RelativeDocumentMoniker": "fmPeople.cs",
-              "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs",
-              "RelativeToolTip": "fmPeople.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmAddEditPerson.cs",
+              "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmAddEditPerson.cs",
+              "RelativeDocumentMoniker": "frmAddEditPerson.cs",
+              "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmAddEditPerson.cs*",
+              "RelativeToolTip": "frmAddEditPerson.cs*",
+              "ViewState": "AgIAADABAAAAAAAAAAAuwDoBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-23T08:15:05.016Z"
+              "WhenOpened": "2026-07-29T04:49:25.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddEditPerson.cs [Design]",
+              "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmAddEditPerson.cs",
+              "RelativeDocumentMoniker": "frmAddEditPerson.cs",
+              "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmAddEditPerson.cs [Design]*",
+              "RelativeToolTip": "frmAddEditPerson.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T04:39:53.894Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "fmPeople.cs",
+              "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs",
+              "RelativeDocumentMoniker": "fmPeople.cs",
+              "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs*",
+              "RelativeToolTip": "fmPeople.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-23T08:15:05.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "fmPeople.cs [Design]",
               "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs",
               "RelativeDocumentMoniker": "fmPeople.cs",
-              "ToolTip": "D:\\Programming_Advices\\Level_One_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\Level_One_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs [Design]",
+              "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\fmPeople.cs [Design]*",
+              "RelativeToolTip": "fmPeople.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-23T08:07:51.608Z"
+              "WhenOpened": "2026-07-23T08:07:51.608Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -73,11 +104,12 @@
               "RelativeToolTip": "MyColorTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-23T06:58:58.458Z"
+              "WhenOpened": "2026-07-23T06:58:58.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
@@ -89,27 +121,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmMain.Designer.cs",
-              "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmMain.Designer.cs",
-              "RelativeDocumentMoniker": "frmMain.Designer.cs",
-              "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmMain.Designer.cs",
-              "RelativeToolTip": "frmMain.Designer.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAmwIQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-23T08:22:48.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "frmMain.cs",
               "DocumentMoniker": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
               "ToolTip": "D:\\Programming_Advices\\Level_One_\u0026_Two_C#\\DVLD\\DVLD-System\\DVLD\\frmMain.cs",
               "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-23T05:56:18.023Z"
+              "WhenOpened": "2026-07-23T05:56:18.023Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -13,7 +13,7 @@ namespace DVLD_DataAccess
     public class clsPersonData
     {
 
-        public static  bool GetPersonById(int PersonID, ref int NationalNo, ref string FirstName,
+        public static  bool GetPersonById(int PersonID, ref string NationalNo, ref string FirstName,
             ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth,
             ref byte Gendor, ref string Address, ref string Phone, ref string Email, ref int NationalityCountryID,
             ref string ImagePath)
@@ -38,7 +38,7 @@ namespace DVLD_DataAccess
                     isFound = true;
 
 
-                    NationalNo = (int)reader["NationalNo"];
+                    NationalNo = (string)reader["NationalNo"];
                     FirstName = (string)reader["FirstName"];
                     SecondName = (string)reader["SecondName"];
                     ThirdName = (string)reader["ThirdName"];
@@ -90,7 +90,7 @@ namespace DVLD_DataAccess
         }
 
 
-        public static int AddNewPerson(int NationalNo, string FirstName,
+        public static int AddNewPerson(string NationalNo, string FirstName,
              string SecondName, string ThirdName, string LastName, DateTime DateOfBirth,
              byte Gendor, string Address, string Phone, string Email, int NationalityCountryID,
              string ImagePath)
@@ -154,7 +154,7 @@ namespace DVLD_DataAccess
         }
 
 
-        public static bool UpdatePersonByID(int PersonID,int NationalNo, string FirstName,
+        public static bool UpdatePersonByID(int PersonID,string NationalNo, string FirstName,
              string SecondName, string ThirdName, string LastName, DateTime DateOfBirth,
              byte Gendor, string Address, string Phone, string Email, int NationalityCountryID,
              string ImagePath)
@@ -333,6 +333,42 @@ namespace DVLD_DataAccess
             }
 
             return isFound;
+        }
+
+        public static bool IsNationalNoUsedByAnotherPerson(int PersonID, string NationalNo)
+        {
+            bool IsFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"SELECT Found = 1
+                     FROM People
+                     WHERE NationalNo = @NationalNo
+                     AND PersonID <> @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                IsFound = (result != null);
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return IsFound;
         }
 
     }
