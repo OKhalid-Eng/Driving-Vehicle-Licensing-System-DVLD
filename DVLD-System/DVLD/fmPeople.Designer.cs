@@ -32,16 +32,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPeople = new System.Windows.Forms.DataGridView();
             this.cmsPeopleManagement = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmAddPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmSendEmail = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPhone = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddPerson = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmFilter = new System.Windows.Forms.ComboBox();
+            this.txtFilter = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).BeginInit();
             this.cmsPeopleManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,11 +56,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Wide Latin", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(628, 149);
+            this.label1.Location = new System.Drawing.Point(511, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(409, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage People";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dgvPeople
             // 
@@ -66,12 +71,12 @@
             this.dgvPeople.BackgroundColor = System.Drawing.Color.Lavender;
             this.dgvPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeople.ContextMenuStrip = this.cmsPeopleManagement;
-            this.dgvPeople.Location = new System.Drawing.Point(2, 212);
+            this.dgvPeople.Location = new System.Drawing.Point(12, 212);
             this.dgvPeople.Name = "dgvPeople";
             this.dgvPeople.ReadOnly = true;
             this.dgvPeople.RowHeadersWidth = 51;
             this.dgvPeople.RowTemplate.Height = 26;
-            this.dgvPeople.Size = new System.Drawing.Size(1596, 417);
+            this.dgvPeople.Size = new System.Drawing.Size(1459, 354);
             this.dgvPeople.TabIndex = 2;
             // 
             // cmsPeopleManagement
@@ -89,38 +94,7 @@
             this.tsmSendEmail,
             this.tsmPhone});
             this.cmsPeopleManagement.Name = "cm";
-            this.cmsPeopleManagement.Size = new System.Drawing.Size(245, 244);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(241, 6);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(241, 6);
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::DVLD.Properties.Resources.user__6_;
-            this.button1.Location = new System.Drawing.Point(1514, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 74);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.multiple_users_silhouette__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(672, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(313, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.cmsPeopleManagement.Size = new System.Drawing.Size(245, 272);
             // 
             // tsmShowDetails
             // 
@@ -130,6 +104,12 @@
             this.tsmShowDetails.Name = "tsmShowDetails";
             this.tsmShowDetails.Size = new System.Drawing.Size(244, 38);
             this.tsmShowDetails.Text = "Show Details";
+            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(241, 6);
             // 
             // tsmAddPerson
             // 
@@ -139,6 +119,7 @@
             this.tsmAddPerson.Name = "tsmAddPerson";
             this.tsmAddPerson.Size = new System.Drawing.Size(244, 38);
             this.tsmAddPerson.Text = "Add New Person";
+            this.tsmAddPerson.Click += new System.EventHandler(this.tsmAddPerson_Click);
             // 
             // tsmEdit
             // 
@@ -147,6 +128,7 @@
             this.tsmEdit.Name = "tsmEdit";
             this.tsmEdit.Size = new System.Drawing.Size(244, 38);
             this.tsmEdit.Text = "Edit";
+            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
             // tsmDelete
             // 
@@ -155,6 +137,12 @@
             this.tsmDelete.Name = "tsmDelete";
             this.tsmDelete.Size = new System.Drawing.Size(244, 38);
             this.tsmDelete.Text = "Delete";
+            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(241, 6);
             // 
             // tsmSendEmail
             // 
@@ -172,13 +160,96 @@
             this.tsmPhone.Size = new System.Drawing.Size(244, 38);
             this.tsmPhone.Text = "Phone Call";
             // 
+            // btnAddPerson
+            // 
+            this.btnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPerson.Image = global::DVLD.Properties.Resources.user__6_;
+            this.btnAddPerson.Location = new System.Drawing.Point(1380, 112);
+            this.btnAddPerson.Name = "btnAddPerson";
+            this.btnAddPerson.Size = new System.Drawing.Size(84, 74);
+            this.btnAddPerson.TabIndex = 6;
+            this.btnAddPerson.UseVisualStyleBackColor = true;
+            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.multiple_users_silhouette__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(599, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(224, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::DVLD.Properties.Resources.close;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(1320, 591);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(134, 38);
+            this.btnClose.TabIndex = 29;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Filter By:";
+            // 
+            // cmFilter
+            // 
+            this.cmFilter.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cmFilter.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmFilter.FormattingEnabled = true;
+            this.cmFilter.Items.AddRange(new object[] {
+            "None",
+            "Person ID",
+            "National No",
+            "First Name",
+            "Second Name",
+            "Third Name",
+            "Last Name",
+            "Nationality",
+            "Gendor ",
+            "Phone ",
+            "Email"});
+            this.cmFilter.Location = new System.Drawing.Point(98, 177);
+            this.cmFilter.Name = "cmFilter";
+            this.cmFilter.Size = new System.Drawing.Size(161, 30);
+            this.cmFilter.TabIndex = 31;
+            this.cmFilter.SelectedIndexChanged += new System.EventHandler(this.cmFilter_SelectedIndexChanged);
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFilter.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilter.Location = new System.Drawing.Point(282, 177);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(191, 29);
+            this.txtFilter.TabIndex = 32;
+            this.txtFilter.Visible = false;
+            // 
             // fmPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1629, 641);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1483, 641);
+            this.Controls.Add(this.txtFilter);
+            this.Controls.Add(this.cmFilter);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnAddPerson);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvPeople);
             this.Controls.Add(this.label1);
@@ -199,7 +270,7 @@
         private System.Windows.Forms.DataGridView dgvPeople;
         private System.Windows.Forms.ContextMenuStrip cmsPeopleManagement;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddPerson;
         private System.Windows.Forms.ToolStripMenuItem tsmShowDetails;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem tsmAddPerson;
@@ -208,5 +279,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem tsmSendEmail;
         private System.Windows.Forms.ToolStripMenuItem tsmPhone;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmFilter;
+        private System.Windows.Forms.TextBox txtFilter;
     }
 }

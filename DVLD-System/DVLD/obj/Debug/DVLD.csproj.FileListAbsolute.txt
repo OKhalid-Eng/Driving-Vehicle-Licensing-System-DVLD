@@ -35,3 +35,5 @@ D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.c
 D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.exe
 D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.pdb
 D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.frmAddEditPerson.resources
+D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.ctrlPersoninfo.resources
+D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.frmPersonDetails.resources

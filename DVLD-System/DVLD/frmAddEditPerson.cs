@@ -31,8 +31,6 @@ namespace DVLD
                 mode = enMode.Add;
             else
                 mode = enMode.Update;
-
-
         }
 
         private void _FillCountriesWithComboBox()
@@ -109,8 +107,7 @@ namespace DVLD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!this.ValidateChildren())
-                return;
+            
 
             int CountryId = clsCountry.Find(cbCountry.Text).ID;
 
@@ -326,6 +323,11 @@ namespace DVLD
                 pictureBox1.Load(selectedFilePath);
                 // ...
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
