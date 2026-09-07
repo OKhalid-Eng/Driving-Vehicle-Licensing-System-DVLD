@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,12 +42,17 @@ namespace DVLD_DataAccess
                     NationalNo = (string)reader["NationalNo"];
                     FirstName = (string)reader["FirstName"];
                     SecondName = (string)reader["SecondName"];
-                    ThirdName = (string)reader["ThirdName"];
+
+                    if (reader["ThirdName"] != DBNull.Value)
+                        ThirdName = (string)reader["ThirdName"];
+                    else
+                        ThirdName = "";
+
                     LastName = (string)reader["LastName"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
                     Gendor = (byte)reader["Gendor"];
                     Address = (string)reader["Address"];
-                    Phone = (string)reader["Address"];
+                    Phone = (string)reader["Phone"];
 
                     //Email: allows null in database so we should handle null
                     if (reader["Email"] != DBNull.Value)
@@ -77,7 +83,11 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
+
                 isFound = false;
             }
 
@@ -88,6 +98,92 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static bool GetPersonByNationalNumber(string NationalNo, ref int PersonID, ref string FirstName,
+           ref string SecondName, ref string ThirdName, ref string LastName, ref DateTime DateOfBirth,
+           ref byte Gendor, ref string Address, ref string Phone, ref string Email, ref int NationalityCountryID,
+           ref string ImagePath)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "select * from People where NationalNo = @NationalNo";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isFound = true;
+
+
+                    PersonID = (int)reader["PersonID"];
+                    FirstName = (string)reader["FirstName"];
+                    SecondName = (string)reader["SecondName"];
+
+                    if (reader["ThirdName"] != DBNull.Value)
+                        ThirdName = (string)reader["ThirdName"];
+                    else
+                        ThirdName = "";
+
+                    LastName = (string)reader["LastName"];
+                    DateOfBirth = (DateTime)reader["DateOfBirth"];
+                    Gendor = (byte)reader["Gendor"];
+                    Address = (string)reader["Address"];
+                    Phone = (string)reader["Phone"];
+
+                    //Email: allows null in database so we should handle null
+                    if (reader["Email"] != DBNull.Value)
+                    {
+                        Email = (string)reader["Email"];
+                    }
+                    else
+                    {
+                        Email = "";
+                    }
+
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+
+                    //ImagePath: allows null in database so we should handle null
+                    if (reader["ImagePath"] != DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
+
+
+                    reader.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
+
+                isFound = false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
 
 
         public static int AddNewPerson(string NationalNo, string FirstName,
@@ -107,7 +203,12 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
-            command.Parameters.AddWithValue("@ThirdName", ThirdName);
+
+            if (ThirdName != "")
+                command.Parameters.AddWithValue("@ThirdName", ThirdName);
+            else
+                command.Parameters.AddWithValue("@ThirdName", System.DBNull.Value);
+
             command.Parameters.AddWithValue("@LastName", LastName);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
             command.Parameters.AddWithValue("@Gendor", Gendor);
@@ -139,8 +240,10 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
-
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
             }
 
             finally
@@ -171,16 +274,17 @@ namespace DVLD_DataAccess
                                 LastName = @LastName, 
                                 DateOfBirth = @DateOfBirth,
                                 Gendor = @Gendor,
-                                Address =@Address
-                                Phone =@Phone
-                                Email =@Email
-                                NationalityCountryID =@NationalityCountryID
-                                ImagePath =@ImagePath
+                                Address = @Address,
+                                Phone = @Phone,
+                                Email = @Email,
+                                NationalityCountryID = @NationalityCountryID,
+                                ImagePath = @ImagePath
                                 where PersonID = @PersonID";
 
 
             SqlCommand command = new SqlCommand(query, connection);
 
+            command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
@@ -212,8 +316,10 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
-
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
             }
 
             finally
@@ -232,7 +338,21 @@ namespace DVLD_DataAccess
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT * FROM People";
+            string query =
+                 @"SELECT People.PersonID, People.NationalNo,
+              People.FirstName, People.SecondName, People.ThirdName, People.LastName,
+			  People.DateOfBirth,  
+				  CASE
+                  WHEN People.Gendor = 0 THEN 'Male'
+
+                  ELSE 'Female'
+
+                  END as GendorCaption ,
+			  People.Address, People.Phone, People.Email, 
+              Countries.CountryName, People.ImagePath
+              FROM            People INNER JOIN
+                         Countries ON People.NationalityCountryID = Countries.CountryID
+                ORDER BY People.FirstName";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -255,7 +375,10 @@ namespace DVLD_DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
             }
             finally
             {
@@ -289,7 +412,10 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
             }
             finally
             {
@@ -322,11 +448,17 @@ namespace DVLD_DataAccess
                 isFound = (result != null);
 
             }
+            
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
+
                 isFound = false;
             }
+
             finally
             {
                 connection.Close();
@@ -334,6 +466,46 @@ namespace DVLD_DataAccess
 
             return isFound;
         }
+
+        public static bool IsPersomExist(string NationalNo)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT Found=1 FROM People WHERE NationalNo = @NationalNo";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
+
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+
+                isFound = (result != null);
+
+            }
+
+            catch (Exception ex)
+            {
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
+
+                isFound = false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
 
         public static bool IsNationalNoUsedByAnotherPerson(int PersonID, string NationalNo)
         {

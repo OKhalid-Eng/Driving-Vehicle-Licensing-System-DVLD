@@ -20,12 +20,18 @@ namespace DVLD_Business
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
         public string LastName { get; set; }
+        public string FullName
+        {
+            get { return FirstName + " " + SecondName + " " + ThirdName + " " + LastName; }
+
+        }
         public DateTime DateOfBirth { get; set; }
         public byte Gendor { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public int NationalityCountryID { get; set; }
+        public clsCountry CountryInfo;
         public string ImagePath { get; set; }
 
         public ClsPerson()
@@ -64,6 +70,7 @@ namespace DVLD_Business
             this.Phone = Phone;
             this.Email = Email;
             this.NationalityCountryID = NationalityCountryID;
+            this.CountryInfo = clsCountry.Find(NationalityCountryID);
             this.ImagePath = ImagePath;
         }
 
@@ -79,6 +86,7 @@ namespace DVLD_Business
 
         private bool _UpdatePerson()
         {
+            // Call DataAccess.
             return clsPersonData.UpdatePersonByID(this.PersonID, this.NationalNo, this.FirstName, this.SecondName,
                  this.ThirdName, this.LastName, this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
         }
@@ -105,6 +113,26 @@ namespace DVLD_Business
 
         }
 
+        public static ClsPerson FindPersonByID(string NationalNo)
+        {
+            string FirstName = "", SecondName = "", ThirdName = "", LastName = "", Address = "",
+                Phone = "", Email = "", ImagePath = "";
+
+            DateTime DateOfBirth = DateTime.Now;
+            byte Gendor = 0;
+
+            int NationalityCountryID = -1, PersonID = -1;
+
+            if (clsPersonData.GetPersonByNationalNumber(NationalNo,  ref PersonID, ref FirstName, ref SecondName, ref ThirdName, ref LastName,
+               ref DateOfBirth, ref Gendor, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
+            {
+                return new ClsPerson(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName,
+                DateOfBirth, Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
+            }
+
+            return null;
+
+        }
 
         public bool Save()
         {
@@ -140,6 +168,11 @@ namespace DVLD_Business
         public static bool IsPersonExist(int ID)
         {
             return clsPersonData.IsPersomExist(ID);
+        }
+
+        public static bool IsPersonExist(string NationalNo)
+        {
+            return clsPersonData.IsPersomExist(NationalNo);
         }
 
         public static bool IsNationalNoUsedByAnotherPerson(int PersonID, string NationalNo)
