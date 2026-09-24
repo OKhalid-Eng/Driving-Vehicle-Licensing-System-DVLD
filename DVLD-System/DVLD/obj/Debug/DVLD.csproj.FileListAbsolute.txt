@@ -58,3 +58,5 @@ D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.T
 D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.Tests.frmListTestAppointments.resources
 D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.Tests.frmTakeTest.resources
 D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.Tests.Controls.ctrlSecheduledTest.resources
+D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.Licenses.Local_Licenses.Controls.ctrlDriverLicenseInfo.resources
+D:\Programming_Advices\Level_One_&_Two_C#\DVLD\DVLD-System\DVLD\obj\Debug\DVLD.Licenses.Local_Licenses.frmIssueDriverLicenseFirstTime.resources

@@ -204,7 +204,7 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
 
-            if (ThirdName != "")
+            if (ThirdName != "" && ThirdName != null) 
                 command.Parameters.AddWithValue("@ThirdName", ThirdName);
             else
                 command.Parameters.AddWithValue("@ThirdName", System.DBNull.Value);
@@ -215,14 +215,14 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@Phone", Phone);
 
-            if (Email != "")
+            if (Email != "" && Email != null) 
                 command.Parameters.AddWithValue("@Email", Email);
             else
                 command.Parameters.AddWithValue("@Email", System.DBNull.Value);
 
             command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
 
-            if (ImagePath != "")
+            if (ImagePath != "" && ImagePath != null) 
                 command.Parameters.AddWithValue("@ImagePath", ImagePath);
             else
                 command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
@@ -295,14 +295,21 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@Address", Address);
             command.Parameters.AddWithValue("@Phone", Phone);
 
-            if (Email != "")
+
+            if (ThirdName != "" && ThirdName != null)
+                command.Parameters.AddWithValue("@ThirdName", ThirdName);
+            else
+                command.Parameters.AddWithValue("@ThirdName", System.DBNull.Value);
+
+
+            if (Email != "" && Email != null) 
                 command.Parameters.AddWithValue("@Email", Email);
             else
                 command.Parameters.AddWithValue("@Email", System.DBNull.Value);
 
             command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
 
-            if (ImagePath != "")
+            if (ImagePath != "" && ImagePath != null) 
                 command.Parameters.AddWithValue("@ImagePath", ImagePath);
             else
                 command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
@@ -531,8 +538,13 @@ namespace DVLD_DataAccess
 
                 IsFound = (result != null);
             }
-            catch
+            catch (Exception ex)
             {
+                EventLog.WriteEntry(
+                       "DVLD",
+                       ex.ToString(),
+                       EventLogEntryType.Error);
+
                 IsFound = false;
             }
             finally

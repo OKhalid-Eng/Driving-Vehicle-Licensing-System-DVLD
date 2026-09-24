@@ -219,7 +219,7 @@ namespace DVLD_Business
             int DriverID = -1;
             clsDriver Driver = clsDriver.FindByPersonID(this.ApplicantPersonID);
 
-            if(Driver==null)
+            if (Driver == null) 
             {
                 Driver = new clsDriver();
 

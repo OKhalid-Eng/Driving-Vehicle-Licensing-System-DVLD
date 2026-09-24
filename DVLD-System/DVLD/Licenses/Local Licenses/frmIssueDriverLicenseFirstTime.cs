@@ -32,7 +32,7 @@ namespace DVLD.Licenses.Local_Licenses
             if (_LDLApp == null)
             {
 
-                MessageBox.Show("No Applicaiton with ID=" + _LocalDrivingLicenseApplicationID.ToString(), "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Applicaiton with ID=" + _LDLAppID.ToString(), "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
                 return;
             }
