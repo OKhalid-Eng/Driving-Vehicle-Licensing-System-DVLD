@@ -159,5 +159,10 @@ namespace DVLD.User
                 errorProvider1.SetError(txtConfirmPassword, "");
             }
         }
+
+        private void ctrlUserCardcs1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

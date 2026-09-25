@@ -78,6 +78,9 @@ namespace DVLD.User.Controls
             lblIsActive.Text = "????";
         }
 
-     
+        private void ctrlUserCardcs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,7 +48,7 @@ namespace DVLD.User
 
                 _User = new clsUser();
 
-
+                this.Text = "Add User";
                 tpLoginInfo.Enabled = false;
 
                 return;
@@ -77,6 +77,8 @@ namespace DVLD.User
                 chkIsActive.Checked = true;
             else
                 chkIsActive.Checked = false;
+
+            this.Text = "Edit User";
 
         }
 
@@ -284,7 +286,7 @@ namespace DVLD.User
 
         private void frmAddUpdateUser_Activated(object sender, EventArgs e)
         {
-            ctrlPersonCardWithFilter1.FilterFocus();
+          // ctrlPersonCardWithFilter1.FilterFocus();
 
         }
     }

@@ -56,6 +56,7 @@
             this.ctrlUserCardcs1.Name = "ctrlUserCardcs1";
             this.ctrlUserCardcs1.Size = new System.Drawing.Size(1177, 676);
             this.ctrlUserCardcs1.TabIndex = 0;
+            this.ctrlUserCardcs1.Load += new System.EventHandler(this.ctrlUserCardcs1_Load);
             // 
             // txtConfirmPassword
             // 
@@ -93,7 +94,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rubik", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(122, 508);
+            this.label4.Location = new System.Drawing.Point(68, 508);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(190, 36);
             this.label4.TabIndex = 45;

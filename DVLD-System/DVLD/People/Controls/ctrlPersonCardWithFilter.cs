@@ -102,7 +102,7 @@ namespace DVLD.People.Controls
                     break;
 
                 case 1:
-                    ctrlPersoninfo1.LoadPersonInfo(txtFind.Text);
+                    ctrlPersoninfo1.LoadPersonInfo(txtFind.Text.Trim());
                     break;
 
                 default:

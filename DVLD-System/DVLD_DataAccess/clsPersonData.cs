@@ -288,7 +288,11 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
-            command.Parameters.AddWithValue("@ThirdName", ThirdName);
+            if (ThirdName != "" && ThirdName != null)
+                command.Parameters.AddWithValue("@ThirdName", ThirdName);
+            else
+                command.Parameters.AddWithValue("@ThirdName", System.DBNull.Value);
+
             command.Parameters.AddWithValue("@LastName", LastName);
             command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
             command.Parameters.AddWithValue("@Gendor", Gendor);
@@ -296,12 +300,7 @@ namespace DVLD_DataAccess
             command.Parameters.AddWithValue("@Phone", Phone);
 
 
-            if (ThirdName != "" && ThirdName != null)
-                command.Parameters.AddWithValue("@ThirdName", ThirdName);
-            else
-                command.Parameters.AddWithValue("@ThirdName", System.DBNull.Value);
-
-
+            
             if (Email != "" && Email != null) 
                 command.Parameters.AddWithValue("@Email", Email);
             else

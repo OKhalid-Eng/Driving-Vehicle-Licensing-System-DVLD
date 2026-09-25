@@ -68,6 +68,7 @@ namespace DVLD
                 lblMode.Text = "Add New Contact.";
 
                 _Person = new ClsPerson();
+                this.Text = "Add Person";
                 return;
             }
 
@@ -78,6 +79,7 @@ namespace DVLD
                 MessageBox.Show($"This form will be Close No contact with ID:{_PersonID}", "Don't Find ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
+            this.Text = "Edit Person";
 
 
             lblMode.Text = "Edit Contact ID = " + _PersonID;
@@ -401,7 +403,6 @@ namespace DVLD
         {
             this.Close();
         }
-
        
     }
 }

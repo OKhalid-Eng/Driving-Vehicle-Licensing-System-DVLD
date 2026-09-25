@@ -123,15 +123,14 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAOsAAADrASts18IAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABV0lEQVRYR+3UsUtbcRDA8e/Q/7CL0EGNi1Zq/gAn4yBx0S7axbg0W8bgEqE0Lr4tmeKi0rqK4FSo
-        /t5XHhiwRxCJL0Lxfda7H9y7d3dQqVQq/4NNXG/i1Vecj7FoiB9H+OsSt2Jsag383UR3MX3DpRgfO8W5
-        Ad6N0Au8jfGpbeB8E9Muuo/pYEIRP/FThvcDtCjgEtdizqtsY63owD7awryNK+PYMc718S5DB5ifYf3f
-        1yXZwVrRgRbaxryDK12s9TD10QzzAX6J70pVzEALUxvtYOpi6qF9zDNcjvkz0cLFNqYO2kV7mJ/g55g3
-        M4dYiwX0n8zETD3zC1I2YTtKNWEIl+MQDmfVibiG358M3DEuPXZgvIblFtHAhRccotXHNSwOUTrHxZgz
-        tQbevPAU18eX8AL/iB9izlQ2cK+J1zu4EGPREOsj/HuORzH2Zn6U9eWVSuVdeADhoB/2ZTitOwAAAABJ
-        RU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFXSURBVFhH7dSx
+        S1txEMDx79D/sIvQQY2LVmr+ACfjIHHRLtrFuDRbxuASoTQuvi2Z4qLSuorgVKj+3lceGLBHEIkvQvF9
+        1rsf3Lt3d1CpVCr/g01cb+LVV5yPsWiIH0f46xK3YmxqDfzdRHcxfcOlGB87xbkB3o3QC7yN8alt4HwT
+        0y66j+lgQhE/8VOG9wO0KOAS12LOq2xjrejAPtrCvI0r49gxzvXxLkMHmJ9h/d/XJdnBWtGBFtrGvIMr
+        Xaz1MPXRDPMBfonvSlXMQAtTG+1g6mLqoX3MM1yO+TPRwsU2pg7aRXuYn+DnmDczh1iLBfSfzMRMPfML
+        UjZhO0o1YQiX4xAOZ9WJuIbfnwzcMS49dmC8huUW0cCFFxyi1cc1LA5ROsfFmDO1Bt688BTXx5fwAv+I
+        H2LOVDZwr4nXO7gQY9EQ6yP8e45HMfZmfpT15ZVK5V14AOGgH/ZlOK07AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
